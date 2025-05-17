@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign In - Resident Billing System</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #04384c;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(to top right, #02566b, #04384c);
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      z-index: -1;
+    }
+
+    .login-box {
+      background-color: #04384c;
+      padding: 40px 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .login-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .login-header img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .login-box h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .login-box p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #d0d0d0;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background: #052d3a;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .login-box input[type="text"]:focus,
+    .login-box input[type="password"]:focus {
+      outline: none;
+      border: 2px solid #00d084;
+      background-color: #033c45;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #bcbcbc;
+    }
+
+    .options a {
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    .options label {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #00d084;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #00b374;
+    }
+
+    @media (max-width: 600px) {
+      .login-box {
+        padding: 20px;
+      }
+
+      .login-header img {
+        width: 60px;
+      }
+
+      .login-box h2 {
+        font-size: 1.8rem;
+      }
+
+      .login-box input[type="text"],
+      .login-box input[type="password"] {
+        font-size: 1rem;
+      }
+
+      .login-box button {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <div class="login-header">
+      <img src="login.webp" alt="Login Icon" />
+      <h2>Login</h2>
+    </div>
+    <p>Welcome to the Bharosa Billing System!</p>
+
+    <!-- FORM STARTS HERE -->
+    <form method="POST" action="login.php">
+      <input type="text" name="username" placeholder="Login" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <div class="options">
+        <label><input type="checkbox" name="remember" /> Remember me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <!-- FORM ENDS HERE -->
+  </div>
+
+  <div class="wave"></div>
+
+  <div style="position: fixed; bottom: 0; width: 100%; text-align: center; background-color: #04384c;">
+    <hr style="border: none; border-top: 1px solid #444; margin: 0;" />
+    <p style="margin: 5px 0; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 16px; color: #d0d0d0;">
+      Mehfooz Building
+    </p>
+  </div>
+</body>
+</html>
